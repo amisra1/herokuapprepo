@@ -214,6 +214,7 @@ module.exports = async function (fastify, opts) {
 
         // Get DataCloud org connection from add-on
         logger.info(`Getting '${orgName}' org connection from Heroku Integration add-on...`);
+        logger.info(`Getting '${orgName}' org connection from Heroku Integration add-on...`);
         const org = await herokuIntegrationAddon.getConnection(orgName);
 
         // Query DataCloud org
@@ -223,5 +224,5 @@ module.exports = async function (fastify, opts) {
       }
 
       reply.code(201).send();
-    });
+    } );
 }
